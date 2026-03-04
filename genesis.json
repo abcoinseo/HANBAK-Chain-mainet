@@ -1,20 +1,16 @@
 {
- "config": {
-  "chainId": 1859122391,
-  "homesteadBlock": 0,
-  "eip150Block": 0,
-  "eip155Block": 0,
-  "eip158Block": 0,
-  "clique": {
-   "period": 2,
-   "epoch": 30000
+ "config":{
+  "chainId":1859122391,
+  "clique":{
+   "period":2,
+   "epoch":30000
   }
  },
- "difficulty": "1",
- "gasLimit": "100000000",
- "alloc": {
-  "0xFABB0ac9d68B0B445fB7357272Ff202C5651694a": {
-   "balance": "10000000000000000000000000"
+ "difficulty":"1",
+ "gasLimit":"100000000",
+ "alloc":{
+  "0xFABB0ac9d68B0B445fB7357272Ff202C5651694a":{
+   "balance":"10000000000000000000000000"
   }
  }
 }
