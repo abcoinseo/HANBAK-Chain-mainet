@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: hanbak-chain
+    env: docker
+    plan: free
+    autoDeploy: true
