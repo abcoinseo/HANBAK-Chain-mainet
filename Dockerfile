@@ -1,10 +1,14 @@
 FROM ethereum/client-go:stable
 
-COPY genesis.json /genesis.json
+WORKDIR /app
 
-RUN mkdir /chain
+COPY genesis.json /app/genesis.json
 
-RUN geth --datadir /chain init /genesis.json
+RUN mkdir -p /chain
+
+RUN geth --datadir /chain init /app/genesis.json
+
+EXPOSE 10000
 
 CMD geth \
 --datadir /chain \
@@ -13,6 +17,7 @@ CMD geth \
 --http.addr 0.0.0.0 \
 --http.port 10000 \
 --http.api eth,net,web3,personal,miner \
+--syncmode full \
+--allow-insecure-unlock \
 --mine \
---miner.threads 1 \
---allow-insecure-unlock
+--miner.threads 1
